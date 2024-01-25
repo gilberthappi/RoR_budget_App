@@ -6,7 +6,8 @@ class TransactionsController < ApplicationController
   # GET /transactions or /transactions.json
   def index
     @category = Category.includes(:user, :transactions).find(params['category_id'])
-    @transactions = Transaction.includes(:user, :categories).where(category_id: params['category_id'])
+    @transactions = Transaction.includes(:user,
+                                         :categories).where(category_id: params['category_id']).order(created_at: :desc)
   end
 
   # GET /transactions/1 or /transactions/1.json
@@ -57,7 +58,7 @@ class TransactionsController < ApplicationController
   # DELETE /transactions/1 or /transactions/1.json
   def destroy
     # puts plain: params
-    @transaction = Transaction.includes.call(:user, :categories).find(params[:id])
+    @transaction = Transaction.find(params[:id])
     @transaction.destroy
     flash[:notice] = 'Transaction was successfully deleted.'
     redirect_to category_transactions_path
