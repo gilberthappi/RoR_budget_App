@@ -14,7 +14,7 @@
  *= require_self
  */
 
- :root {
+:root {
   --header-height: 55px;
   --footer-height: 45px;
 }
