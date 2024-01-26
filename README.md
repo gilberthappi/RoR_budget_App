@@ -3,9 +3,9 @@
 # Budgets
 > Budgets is a mobile web application that allows you to manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 ----
-_[Here](https://www.loom.com/) is the link to the project presentation video_
+_[Here](https://www.loom.com/share/580d903c46f646d18b7afdebb1180fce) is the link to the project presentation video_
 
-_[Here](https://enigmatic-castle-54328.herokuapp.com/) is the link to the live demo_
+_[Here](https://budget-app-nqso.onrender.com/) is the link to the live demo_
 
 ---
 
