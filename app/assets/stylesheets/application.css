@@ -348,6 +348,8 @@ footer a {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   margin: 5px;
+  width: 100%;
+  justify-content: center;
 }
 
 .splash .actions .btn:hover {
