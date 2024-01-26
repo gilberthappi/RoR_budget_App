@@ -58,6 +58,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_25_205207) do
   end
 
   create_table "transactions", force: :cascade do |t|
+    t.string "name"
+    t.float "amount", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id", null: false
