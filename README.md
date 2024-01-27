@@ -65,7 +65,7 @@
 ----
 _[Here](https://www.loom.com/share/580d903c46f646d18b7afdebb1180fce) is the link to the project presentation video_
 
-<!-- _[Here](https://budget-app-nqso.onrender.com/) is the link to the live demo_ -->
+_[Here](https://budget-app-nqso.onrender.com/) is the link to the live demo_
 
 ---
 
