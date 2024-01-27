@@ -1,5 +1,10 @@
+<header>
+  <%= link_to "Back", root_path, class: "btn"  %>
+
+</header>
+
 <section class="auth-form">
-  <h2>Log in</h2>
+  <h2>LOG IN</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false })  do |f| %>
     <div class="field">
@@ -20,7 +25,7 @@
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Log in", class:'btn' %>
+      <%= f.submit "Log in", class:'btn', style: "position: absolute; top: 0; right: 0; color: #fff" %>
     </div>
   <% end %>
 </section>
