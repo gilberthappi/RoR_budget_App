@@ -1,23 +1,31 @@
+<header>
+  <%= link_to "Back", root_path, class: "btn"  %>
+
+</header>
+
 <section class="auth-form">
-  <h2>Sign up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <h2>SIGN UP</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="actions">
+  <%= f.submit "Sign up", class:"btn",  style: "position: absolute; top: 0; right: 0; color: #fff" %>
+</div>
 
-    <div class="field">
-      <%= f.label :full_name %><br />
-      <%= f.text_field :full_name, autocomplete: "name" %>
-    </div>
+  <div class="field">
+    <%= f.label :full_name %><br />
+    <%= f.text_field :full_name, autocomplete: "name" %>
+  </div>
 
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
     <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
@@ -27,9 +35,7 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Sign up", class: "btn" %>
-    </div>
+ 
   <% end %>
 </section>
 
